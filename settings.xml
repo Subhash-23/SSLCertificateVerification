@@ -1,0 +1,104 @@
+<settings>
+  <localRepository>c:\Users\hn4380\.m2\repository</localRepository>
+  <!-- 
+	If you prefer to relocate your local repository to somewhere other than ~.m2/repository 
+	then uncomment the <localrepository/> tag below and specify your location. 
+	<localRepository>c:/relocated/maven/repository</localRepository> 
+	-->
+  <mirrors>
+    <mirror>
+      <id>nexus</id>
+      <mirrorOf>*</mirrorOf>
+      <url>https://repocentral.it.att.com:8443/nexus/repository/att-public-group/</url>
+    </mirror>
+  </mirrors>
+  <profiles>
+    <profile>
+      <id>nexus</id>     
+        <repository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+        </repository>
+		 <repositories>
+        <repository>
+          <id>atlassian-public</id>
+          <url>https://m2proxy.atlassian.com/repository/public</url>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>daily</updatePolicy>
+            <checksumPolicy>warn</checksumPolicy>
+          </snapshots>
+          <releases>
+            <enabled>true</enabled>
+            <checksumPolicy>warn</checksumPolicy>
+          </releases>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>atlassian-public</id>
+          <url>https://m2proxy.atlassian.com/repository/public</url>
+          <releases>
+            <enabled>true</enabled>
+            <checksumPolicy>warn</checksumPolicy>
+          </releases>
+          <snapshots>
+            <checksumPolicy>warn</checksumPolicy>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>nexus</activeProfile>
+  </activeProfiles>
+  <pluginGroups>
+    <pluginGroup>org.sonatype.plugins</pluginGroup>
+  </pluginGroups>
+  <servers>
+    <server>
+      <id>nexus</id>
+      <username>hn4380</username>
+      <password>Helloworld@12</password>
+	  <filePermissions>774</filePermissions> 
+	<directoryPermissions>775</directoryPermissions> 
+    </server>
+	</servers>
+  <proxies>
+    <proxy>
+      <id>one</id>
+      <active>true</active>
+      <protocol>https</protocol>
+      <host>sub.proxy.att.com</host>
+      <port>8080</port>
+      <nonProxyHosts>maven</nonProxyHosts>
+    </proxy>
+  </proxies>
+</settings>
+
+
+
+
+
+
+
+
+
