@@ -1,0 +1,20 @@
+JMETER
+Apache JMeter is an open-source software designed to perform load testing, performance testing, and functional testing on web applications. It is a testing tool used to simulate heavy load on network server to test its strength and analyze overall performance under various loads.  The main purpose of using this testing tool is to measure the performance of the application as we would've already used tools like junit, mockito to test its functionality.
+
+KEYFEATURES:
+	Performance Measurement under different loads
+	Wide range of protocol support
+	Extensible support
+	User-Friendly GUI
+	Distributed load measurement
+
+COMPONENTS OF JMETER:
+TestPlan - Blueprint or overall schedule
+ThreadGroup - virtual user/group of simulated users
+LogicController - controls the flow
+Assertion - criteria to check whether the tests  are passed
+Timer - time delays
+Sampler - sending the request
+Listeners - capturing the result
+Configuration Elements - predefined data like credentials
+Pre/Post Controllers - modifying before or after the sampler execution
